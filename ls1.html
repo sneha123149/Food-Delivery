@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>Login</title>
+<style>
+   body {
+    background: linear-gradient(to right, #ff6a00, #ff2e63);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .container {
+        margin-top: 80px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.8s ease-in;
+    }
+    h1 {
+        text-align: center;
+        color: #17a2b8;
+        margin-bottom: 30px;
+        animation: slideDown 1s ease-out;
+    }
+    .form-control {
+        transition: 0.3s ease;
+    }
+    .form-control:focus {
+        box-shadow: 0 0 8px rgba(23, 162, 184, 0.5);
+        border-color: #17a2b8;
+    }
+    .btn-primary {
+        width: 100%;
+        font-weight: bold;
+        background-color: #17a2b8;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #138496;
+    }
+    .forgot-password, .switch {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .forgot-password a,
+    .switch a {
+        color: #138496;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .forgot-password a:hover,
+    .switch a:hover {
+        text-decoration: underline;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+        from { transform: translateY(-40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    <div class="container col-md-6">
+        <h1><i class="fas fa-sign-in-alt"></i> Login</h1>
+        <form name="frm" action="index.html">
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" name="email" id="email" class="form-control border-primary">
+            </div>
+            <div class="form-group">
+                <label for="pwd"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" name="pwd" id="pwd" class="form-control border-primary">
+            </div>
+            <input type="submit" name="ok" value="Login" class="btn btn-primary">
+        </form>
+        <div class="forgot-password">
+            <p><a href="fg.html">Forgot Password?</a></p>
+        </div>
+        <div class="switch">
+            <p>Don't have an account? <a href="reg.html">Sign Up</a></p>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>

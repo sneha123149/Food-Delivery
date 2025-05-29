@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - Sneha's Kitchen</title>
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #ff6a00, #ff2e63);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Header Styling */
+        h1 {
+            background-color: orangered;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            flex: 1;
+            max-width: 300px;
+            background: white;
+            margin: 0 15px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card img {
+            max-width: 150px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover img {
+            transform: rotate(5deg);
+        }
+
+        .feature-card h3 {
+            margin: 10px 0;
+            color: orangered;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: orangered;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>About Us</h1>
+    <div class="features">
+        <div class="feature-card">
+            <img src="fd.webp" alt="Fast Delivery">
+            <h3>Fast Delivery</h3>
+            <p>Enjoy lightning-fast delivery of your favorite dishes right at your doorstep.</p>
+        </div>
+        <div class="feature-card">
+            <img src="open.jpg" alt="24/7 Open">
+            <h3>24/7 Open</h3>
+            <p>We are always open, ensuring you can enjoy delicious meals anytime.</p>
+        </div>
+        <div class="feature-card">
+            <img src="cod.jpg" alt="Cash on Delivery">
+            <h3>Cash on Delivery</h3>
+            <p>Pay conveniently with cash on delivery for all your orders.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Sneha's Kitchen. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('bg3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Header Styling */
+        .header {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+            color: #ffcc70;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: rgba(248, 249, 250, 0.9);
+            color: black;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .feature-card {
+            flex: 1;
+            max-width: 300px;
+            background: white;
+            margin: 0 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card img {
+            max-width: 200px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 1rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer .social-icons a:hover {
+            color: #ffcc70;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Sneha's Kitchen</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h1>Sneha's Kitchen</h1>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop1.html">Shop</a>
+            <a href="about.html">About us</a>
+            <a href="pp.html">Privacy Policy</a>
+            <a href="od.html">Offers and Discounts</a>
+            <a href="ls1.html">Sign In</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Sneha's Kitchen</h1>
+        <p>Discover the best food & drinks at Sneha's Kitchen</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-card">
+            <img src="oo.jpg" alt="Order Online">
+            <h3>Order Online</h3>
+            <p>Conveniently order your favorite meals online and enjoy!</p>
+        </div>
+        <div class="feature-card">
+            <img src="cd.jpg" alt="Cash on Delivery">
+            <h3>Cash on Delivery</h3>
+            <p>Pay for your meals with cash at your doorstep.</p>
+        </div>
+        <div class="feature-card">
+            <img src="cb.jpg" alt="Cashback on Family Order">
+            <h3>Cashback on Family Order</h3>
+            <p>Enjoy exclusive cashback offers on family orders.</p>
+        </div>
+    </div>
+
+    <!-- Trending Menu -->
+    <div class="hero-section">
+        <h1>Trending Menu</h1>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <img src="vt.jpg" alt="Veg Thali">
+            <h3>Veg Thali</h3>
+        </div>
+        <div class="feature-card">
+            <img src="ct.jpg" alt="Chicken Thali">
+            <h3>Chicken Thali</h3>
+        </div>
+        <div class="feature-card">
+            <img src="et.jpg" alt="Egg Thali">
+            <h3>Egg Thali</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Sneha's Kitchen. All Rights Reserved.</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+
+    <!-- FontAwesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>Registration</title>
+<style>
+    body {
+        background: linear-gradient(to right, #ff6a00, #ff2e63);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+        margin-top: 60px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        animation: slideIn 0.8s ease;
+    }
+    .container h1 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 25px;
+        animation: fadeIn 1s ease-in-out;
+    }
+    .form-control {
+        transition: all 0.3s ease;
+    }
+    .form-control:focus {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        border-color: #007bff;
+    }
+    .btn-primary {
+        width: 100%;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    <div class="container col-md-6">
+        <h1><i class="fas fa-user-plus"></i> Sign Up</h1>
+        <form name="frm" action="ls1.html">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" name="name" id="name" class="form-control border-primary">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" name="email" id="email" class="form-control border-primary">
+            </div>
+            <div class="form-group">
+                <label for="pwd"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" name="pwd" id="pwd" class="form-control border-primary">
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-venus-mars"></i> Gender</label><br>
+                <input type="radio" name="gender" value="Male" id="gender"> Male
+                <input type="radio" name="gender" value="Female" id="gender"> Female
+            </div>
+            <div class="form-group">
+                <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+                <textarea name="address" id="address" class="form-control border-primary"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city"><i class="fas fa-city"></i> City</label>
+                <select name="city" id="city" class="form-control border-primary">
+                    <option value="" selected>-Select City-</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <input type="submit" name="ok" value="Register" class="btn btn-primary">
+        </form>
+        
+
+
+</body>
+</html>

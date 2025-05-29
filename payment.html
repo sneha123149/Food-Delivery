@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e3f2fd;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .price-breakdown {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section" id="buyNowSection">
+            <h2 style="color: #007bff;">Buy Now</h2>
+
+            <label>Menu:</label>
+            <select id="product" onchange="calculatePrice()">
+                <option value="150">Chicken Thali</option>
+                <option value="250">Mutton Thali</option>
+                <option value="180">Fish Thali</option>
+                <option value="120">Veg Thali</option>
+                <option value="200">Prawn Thali</option>
+                <option value="160">Special Noodles</option>
+                <option value="190">Chicken Biryani</option>
+                <option value="150">pizza</option>
+                <option value="120">Dessert</option>
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1" onchange="calculatePrice()">
+
+            <div class="price-breakdown">
+                <p>Product Price: ₹<span id="productPrice">99</span></p>
+                <p>Discount(15%): ₹<span id="discount">0</span></p>
+                <p>GST (10%): ₹<span id="gst">0</span></p>
+                <p>Free Delivery: ₹<span id="freeDelivery">0</span></p>
+
+                <p><strong>Total: ₹<span id="totalPrice"> </span></strong></p>
+            </div>
+
+            <button class="btn" onclick="showPaymentSection()">Proceed to Payment</button>
+        </div>
+
+        <div class="section" id="paymentSection" style="display: none;">
+            <h2 style="color: #007bff;">Payment</h2>
+            <label>Select Payment Method:</label>
+            <select id="paymentMethod">
+                <option value="online">Online Payment</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+
+            <button class="btn" onclick="handlePayment()">Proceed to Payment</button>
+
+
+            
+        </div>
+    </div>
+
+    <script>
+        function calculatePrice() {
+            let productSelect = document.getElementById('product');
+            let quantity = parseInt(document.getElementById('quantity').value);
+            let price = parseFloat(productSelect.value); // Correctly fetch the selected price
+            let totalPrice = price * quantity;
+
+            let discount = totalPrice >= 100 ? totalPrice * 0.15 : 0;
+            let gst = (totalPrice - discount) * 0.10;
+            let freeDelivery = 0; // Assuming free delivery is zero
+
+            let finalAmount = totalPrice - discount + gst + freeDelivery;
+
+            document.getElementById('productPrice').innerText = totalPrice.toFixed(2);
+            document.getElementById('discount').innerText = discount.toFixed(2);
+            document.getElementById('gst').innerText = gst.toFixed(2);
+            document.getElementById('freeDelivery').innerText = freeDelivery.toFixed(2);
+
+            document.getElementById('totalPrice').innerText = finalAmount.toFixed(2);
+        }
+
+        function showPaymentSection() {
+            calculatePrice(); // Calculate price when proceeding to payment
+            document.getElementById('buyNowSection').style.display = 'none';
+            document.getElementById('paymentSection').style.display = 'block';
+        }
+        function handlePayment() {
+    const method = document.getElementById('paymentMethod').value;
+    if (method === 'online') {
+        window.location.href = "op.html"; 
+    } else if (method === 'cod') {
+        window.location.href = "place.html";
+    }
+}
+
+
+
+        function placeOrder() {
+            window.location.href = "place.html";
+        }
+
+    </script>
+</body>
+
+</html>

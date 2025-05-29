@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Discounts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #ff6f61, #ffcc70);
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.85) !important;
+            padding: 15px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            background: url('offer-banner.jpg') no-repeat center/cover;
+            position: relative;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Offers Section */
+        .offers {
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .offer-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .offer-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .offer-card-body {
+            padding: 20px;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        .offer-desc {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn-offer {
+            background: linear-gradient(90deg, #ff6f61, #ffcc70);
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .btn-offer:hover {
+            background: linear-gradient(90deg, #ff4d4d, #ffae42);
+            transform: scale(1.08);
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Food Shop - Offers</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Exclusive Offers & Discounts! 🎉</h1>
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <!-- Offers Section -->
+    <div class="container offers">
+        <h2 class="mb-4">🔥 Hot Deals for You! 🔥</h2>
+        <div class="row">
+            <!-- Offer 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="offer-card">
+                    <img src="cbi.jpg" alt="Discount Offer">
+                    <div class="offer-card-body">
+                        <h3 class="offer-title">Flat 30% Off on Biryani!</h3>
+                        <p class="offer-desc">Order now and enjoy delicious Biryani at a discounted price.</p>
+                        <button class="btn btn-offer">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="offer-card">
+                    <img src="p.jpg" alt="Special Offer">
+                    <div class="offer-card-body">
+                        <h3 class="offer-title">Buy 1 Get 1 Free - Pizza 🍕</h3>
+                        <p class="offer-desc">Grab your favorite pizza and get one absolutely free.</p>
+                        <button class="btn btn-offer">Grab Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="offer-card">
+                    <img src="d.jpg" alt="Special Discount">
+                    <div class="offer-card-body">
+                        <h3 class="offer-title">Free Dessert on Orders Above ₹500</h3>
+                        <p class="offer-desc">Spend ₹500 or more and get a free dessert of your choice.</p>
+                        <button class="btn btn-offer">Get Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

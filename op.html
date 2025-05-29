@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #8EC5FC, #E0C3FC);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .payment-container {
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 600px;
+            animation: fadeIn 0.7s ease;
+        }
+        .payment-container h2 {
+            text-align: center;
+            color: #6f42c1;
+            margin-bottom: 30px;
+            animation: slideDown 1s ease;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+        .payment-methods img {
+            width: 60px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .payment-methods img:hover {
+            transform: scale(1.1);
+        }
+
+        .form-control:focus {
+            border-color: #6f42c1;
+            box-shadow: 0 0 8px rgba(111, 66, 193, 0.5);
+        }
+        .btn-pay {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s ease;
+        }
+        .btn-pay:hover {
+            background-color: #5931a9;
+        }
+        #payment-method {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes slideDown {
+            from {opacity: 0; transform: translateY(-30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container payment-container">
+    <h2><i class="fas fa-credit-card"></i> Online Payment</h2>
+    <form id="paymentForm">
+        <div class="form-group">
+            <label for="cardName">Cardholder Name</label>
+            <input type="text" class="form-control" id="cardName" placeholder="Name on Card" required>
+        </div>
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber" maxlength="16" placeholder="1234 5678 9012 3456" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="expiry">Expiry Date</label>
+                <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cvv">CVV</label>
+                <input type="password" class="form-control" id="cvv" maxlength="3" placeholder="123" required>
+            </div>
+        </div>
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" required>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="upi">UPI</option>
+            <option value="net-banking">Net Banking</option>
+        </select>
+        <div class="payment-methods">
+            <img src="visa.jpeg" alt="Visa">
+            <img src="master.jpeg" alt="MasterCard">
+            <img src="pay.jpeg" alt="PayPal">
+            <img src="upi.jpeg" alt="UPI">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount (INR)</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+        </div>
+        <button type="submit" class="btn btn-pay"><i class="fas fa-lock"></i> Pay Now</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("paymentForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    alert("Payment Successful!");
+
+    
+    window.location.href = "place.html";
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
